@@ -2,6 +2,8 @@ import { PanelExtensionContext, RenderState } from "@foxglove/studio";
 import { useLayoutEffect, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
+import Icon from "./FoxeIcon.png";
+
 function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Element {
 
   const [renderDone, setRenderDone] = useState<(() => void) | undefined>();
@@ -19,8 +21,8 @@ function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Elem
 
   return (
     <>
-      <div>{topics?.join(",")}</div>
-      <div>{messages?.length}</div>
+      <p>Loading icon from {Icon}:</p>
+      <img src="{Icon}" width="128px" />
     </>
   );
 }
